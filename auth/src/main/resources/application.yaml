@@ -1,0 +1,21 @@
+spring:
+   application:
+      name: auth
+      
+server:
+   port: 8897
+   
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+   instance:
+      preferIpAddress: true
+      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        

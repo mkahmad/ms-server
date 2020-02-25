@@ -1,0 +1,25 @@
+spring:
+   application:
+      name: gateway
+      
+server:
+   port: 8891
+   
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+   instance:
+      preferIpAddress: true
+      
+zuul:
+   ribbon:
+    eager-load:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
